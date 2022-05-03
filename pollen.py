@@ -134,6 +134,8 @@ for species, img_paths in input_imgs.items():
 
   img_ct = len(img_paths)
 
+  print(f'\nSpecies: {species} ({img_ct} images)\n')
+
   balance_ct = 0
 
   if balance_datasets:
@@ -212,7 +214,9 @@ if aug_count > 0 and balance_datasets:
   max_sample_ct = max(species_samples.values(), key=lambda x: x['img_ct'])['img_ct']
 
   for species, data in species_samples.items():
-    balance_ct = (max_img_ct-data['img_ct'])
+    img_ct = data['img_ct']
+    balance_ct = (max_sample_ct-img_ct)
+
     print(f'extra sample augmentations for species {species}: {balance_ct}.')
     balance_per_img = math.ceil(balance_ct/img_ct)
 

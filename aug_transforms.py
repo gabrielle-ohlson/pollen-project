@@ -37,7 +37,7 @@ def rand_rotate_strict(image):
 
   degrees = random.randrange(0, 360, step=90)
 
-  rand_rotation = torchvision.transforms.RandomRotation(degrees, fill=bg_color)
+  rand_rotation = torchvision.transforms.RandomRotation(degrees, fill=255)
 
   return rand_rotation(image)
 
