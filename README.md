@@ -12,18 +12,9 @@ git clone git@github.com:gabrielle-ohlson/pollen-project.git
 
 
 Then, install [anaconda](https://www.anaconda.com/), and create a new virtual environment with the command:
-<!-- In the console, run the command: -->
 ```console
-conda create --name pollen_project --file environment.yml
+conda env create --file environment.yml -n pollen_project
 ```
-<!-- conda create --name pollen_project python=3.8.5 ipython
-```
-
-Then, install the necessary dependencies:
-```console
-```
-
-conda create --name pollen_project --file requirements.txt -->
 (this will create a new environment by the name of "pollen_project" and install the necessary dependencies)
 
 Note that this system uses python version 3.8.5.
